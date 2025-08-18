@@ -8,13 +8,21 @@
     padding: 10px;
 } */
 
-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    border: 1px solid black;
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid black;
 }
 
-nav a{
-    padding-left: 20px;
+nav a {
+  padding-left: 20px;
+}
+
+dt {
+  font-weight: bold;
+}
+dl {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
 }
