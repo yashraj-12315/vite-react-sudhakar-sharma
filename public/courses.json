@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Salesforce CRM",
+    "duration": "60 days",
+    "faculty": "Mr. Ayush",
+    "image": "salesforce-crm.png"
+  },
+  {
+    "title": "Python",
+    "duration": "70 days",
+    "faculty": "Mr.Yash",
+    "image": "python.png"
+  },
+  {
+    "title": "Oracle",
+    "duration": "80 days",
+    "faculty": "Mr.Ranjit",
+    "image": "oracle.png"
+  }
+]

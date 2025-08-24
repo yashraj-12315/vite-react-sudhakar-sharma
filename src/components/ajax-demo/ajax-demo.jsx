@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 export function AjaxDemo() {
   const [product, setProduct] = useState({
@@ -9,18 +10,32 @@ export function AjaxDemo() {
     offers: [],
   });
 
+  //XMLHttpRequest
+
+  //   function GetProduct() {
+  //     let http = new XMLHttpRequest();
+  //     //configure the request
+  //     http.open("GET", "product.json", true);
+  //     http.send();
+  //     http.onreadystatechange = function () {
+  //       if (http.readyState === 4) {
+  //         //JSON.parse is to convert text into Json
+  //         setProduct(JSON.parse(http.responseText));
+  //         // console.log(JSON.parse(http.responseText));
+  //       }
+  //     };
+  //   }
+
+  // fetch
+  // function GetProduct() {
+  //   fetch("product.json")
+  //     .then((response) => response.json())
+  //     .then((product) => setProduct(product));
+  // }
+
+  //axios
   function GetProduct() {
-    let http = new XMLHttpRequest();
-    //configure the request
-    http.open("GET", "product.json", true);
-    http.send();
-    http.onreadystatechange = function () {
-      if (http.readyState === 4) {
-        //JSON.parse is to convert text into Json
-        setProduct(JSON.parse(http.responseText));
-        // console.log(JSON.parse(http.responseText));
-      }
-    };
+    axios.get("product.json").then((response) => setProduct(response.data));
   }
 
   useEffect(() => {
