@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function bodyload() {
+        document.getElementById("btnInsert").addEventListener("click", (e) => {
+          console.log(`X Position: ${e.clientX} \n
+                ${e.clientY} \n
+                ${e.target.id} \n
+                ${e.target.value}
+                `);
+        });
+      }
+    </script>
+  </head>
+  <body onload="bodyload()">
+    <button id="btnInsert" value="Insert">Insert</button>
+  </body>
+</html>
