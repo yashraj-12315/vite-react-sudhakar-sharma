@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   function InsertClick() {
+      //     console.log("Element inserted...");
+      //   }
+
+      //   function bodyload() {
+      //     var btnDelete = document.createElement("button");
+      //     btnDelete.innerHTML = "Delete";
+      //     document.querySelector("body").appendChild(btnDelete);
+      //     btnDelete.addEventListener("click", () => {
+      //       console.log("Element deleted..");
+      //     });
+
+      //     var btnUpdate = document.getElementById("btn-update");
+      //     btnUpdate.addEventListener("click", () => {
+      //       console.log("Element updated successfully");
+      //     });
+      //   }
+
+      function DataOperation(obj, e, list, ob) {
+        console.log(`Id=${obj.id}\nX=${e.clientX}\nCTRLKey=${e.ctrlKey}`);
+        console.log(list);
+        console.log(ob);
+      }
+    </script>
+  </head>
+  <body onload="bodyload()">
+    <!-- <button onclick="InsertClick()">Insert</button>
+    <button id="btn-update">Update</button> -->
+
+    <button
+      onclick="DataOperation(this,event,['John','Yash'],{Name:'TV'})"
+      id="btnInsert"
+    >
+      Insert
+    </button>
+    <button
+      onclick="DataOperation(this,event,['Ayush','Pinaki'],{Rate:4.2})"
+      id="btnUpdate"
+    >
+      Update
+    </button>
+  </body>
+</html>
