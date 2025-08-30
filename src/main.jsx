@@ -10,7 +10,7 @@ import { DataBinding } from "./components/data-binding/data-binding.js";
 import { AjaxDemo } from "./components/ajax-demo/ajax-demo.jsx";
 import { AjaxArrayObjectDemo } from "./components/ajax-demo/ajax-array-object-demo.jsx";
 import { DateDemo } from "./components/date-demo/date-demo.jsx";
-import { TwoWayBinding } from "./components/two-way-binding/two-way-binding.jsx";
+import CustomArgument from "./components/two-way-binding/two-way-binding.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -21,6 +21,7 @@ createRoot(document.getElementById("root")).render(
     {/* <AjaxDemo /> */}
     {/* <AjaxArrayObjectDemo/> */}
     {/* <DateDemo/> */}
-    <TwoWayBinding />
+    {/* <TwoWayBinding /> */}
+    <CustomArgument/>
   </StrictMode>
 );
