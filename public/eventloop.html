@@ -1,0 +1,16 @@
+<script>
+    console.log("Execution Starts")
+    fetch(`https://fakestoreapi.com/products/categories`)
+    .then(response=>response.json())
+    .then(data=>{
+        data.map((item)=>console.log(item))
+    })
+
+    setTimeout(() => {
+        console.log(`I am fetching data from API`)
+    }, 0);
+
+    console.log("End Execution")
+
+    //fetch and setTImeOut are already promise so no need to write async and await
+</script>
