@@ -11,6 +11,7 @@ import { AjaxDemo } from "./components/ajax-demo/ajax-demo.jsx";
 import { AjaxArrayObjectDemo } from "./components/ajax-demo/ajax-array-object-demo.jsx";
 import { DateDemo } from "./components/date-demo/date-demo.jsx";
 import CustomArgument from "./components/two-way-binding/two-way-binding.jsx";
+import MouseDemo from "./components/mouse-event/mouse-event.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -22,6 +23,8 @@ createRoot(document.getElementById("root")).render(
     {/* <AjaxArrayObjectDemo/> */}
     {/* <DateDemo/> */}
     {/* <TwoWayBinding /> */}
-    <CustomArgument/>
+    {/* <CustomArgument/> */}
+    {/* <StyleBinding /> */}
+    <MouseDemo/>
   </StrictMode>
 );
