@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import "./mouse-event.css";
 
 export default function MouseDemo() {
   const [mobiles, setMobiles] = useState([{ img_src: "" }]);
-  const [previewsrc, setPreviewsrc] = useState("m1.jpg");
+  const [previewsrc, setPreviewsrc] = useState("m1.png");
 
   useEffect(() => {
     axios.get("mobile.json").then((response) => setMobiles(response.data));
@@ -15,7 +16,7 @@ export default function MouseDemo() {
   return (
     <div className="container-fluid">
       <div className="row mt-4 ">
-        <div className="col-1 ">
+        <div className="col-1">
           {mobiles.map((mobile, idx) => (
             <div key={idx} className="my-2">
               <img
