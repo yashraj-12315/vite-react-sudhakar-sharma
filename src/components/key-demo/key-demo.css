@@ -1,0 +1,11 @@
+.valid-style {
+  outline: none;
+  border: 1px solid green;
+  box-shadow: 2px 2px 2px green;
+}
+
+.invalid-style {
+  outline: none;
+  border: 1px solid red;
+  box-shadow: 2px 2px 2px red;
+}

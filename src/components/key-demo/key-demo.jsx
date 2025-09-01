@@ -1,11 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import "./key-demo.css";
 
 export function KeyDemo() {
   const [users, setUsers] = useState([{ user_id: "" }]);
   const [usermsg, setUserMsg] = useState("");
   const [validationClass, setValidationClass] = useState("");
   const [toggleMsg, setToggleMsg] = useState("d-none");
+  const [textStyle, setTextStyle] = useState("");
 
   useEffect(() => {
     axios.get(`users.json`).then((response) => setUsers(response.data));
@@ -16,10 +18,12 @@ export function KeyDemo() {
       if (user.user_id === e.target.value) {
         setUserMsg(`User Id already taken - Try another`);
         setValidationClass("text-danger");
+        setTextStyle("invalid-style");
         break;
       } else {
         setUserMsg(`User Id available`);
         setValidationClass("text-success");
+        setTextStyle("valid-style");
       }
     }
   }
@@ -37,7 +41,7 @@ export function KeyDemo() {
       <dl>
         <dt>User ID</dt>
         <dd>
-          <input type="text" onKeyUp={handleKeyUp} />
+          <input className={textStyle} type="text" onKeyUp={handleKeyUp} />
         </dd>
         <dd className={validationClass}>{usermsg}</dd>
         <dt>Password</dt>
