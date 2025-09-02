@@ -1,6 +1,10 @@
 export function ClickEvent() {
-  function handleDoubleClick() {
+  function LoadImage() {
     window.open("girl-image.jpg", "Girl Image", "width=300 height=400");
+  }
+
+  function handleDoubleClick() {
+    setTimeout(LoadImage, 5000);
   }
 
   function handleContextMenu() {

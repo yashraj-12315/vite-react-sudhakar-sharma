@@ -33,8 +33,8 @@ createRoot(document.getElementById("root")).render(
     {/* <MouseDemo/> */}
     {/* <KeyDemo/> */}
     {/* <PasswordDemo/> */}
-    {/* <ClickEvent/> */}
+    <ClickEvent/>
     {/* <ElementStateDemo /> */}
-    <EmiCalculator/>
+    {/* <EmiCalculator/> */}
   </StrictMode>
 );
