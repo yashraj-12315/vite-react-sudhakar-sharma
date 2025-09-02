@@ -14,6 +14,8 @@ import CustomArgument from "./components/two-way-binding/two-way-binding.jsx";
 import MouseDemo from "./components/mouse-event/mouse-event.jsx";
 import { KeyDemo } from "./components/key-demo/key-demo.jsx";
 import { PasswordDemo } from "./components/password-demo/password-demo.jsx";
+import { ClickEvent } from "./components/button-event/button-event.jsx";
+import { ElementStateDemo } from "./components/element-state-demo/element-state-demo.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -29,6 +31,8 @@ createRoot(document.getElementById("root")).render(
     {/* <StyleBinding /> */}
     {/* <MouseDemo/> */}
     {/* <KeyDemo/> */}
-    <PasswordDemo/>
+    {/* <PasswordDemo/> */}
+    {/* <ClickEvent/> */}
+    <ElementStateDemo />
   </StrictMode>
 );
