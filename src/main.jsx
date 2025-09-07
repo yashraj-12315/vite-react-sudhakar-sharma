@@ -17,6 +17,7 @@ import { PasswordDemo } from "./components/password-demo/password-demo.jsx";
 import { ClickEvent } from "./components/button-event/button-event.jsx";
 import { ElementStateDemo } from "./components/element-state-demo/element-state-demo.jsx";
 import { EmiCalculator } from "./components/emi-calculator/emi-calculator.jsx";
+import { TimerDemo } from "./components/timer-demo/timer-demo.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -33,8 +34,9 @@ createRoot(document.getElementById("root")).render(
     {/* <MouseDemo/> */}
     {/* <KeyDemo/> */}
     {/* <PasswordDemo/> */}
-    <ClickEvent/>
+    {/* <ClickEvent/> */}
     {/* <ElementStateDemo /> */}
     {/* <EmiCalculator/> */}
+    <TimerDemo/>
   </StrictMode>
 );
