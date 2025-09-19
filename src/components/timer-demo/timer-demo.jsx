@@ -23,7 +23,7 @@ export function TimerDemo() {
   }
 
   function handleCancelClick() {
-    clearInterval(thread.current);
+    clearTimeout(thread.current);
   }
   return (
     <div className="container-fluid">

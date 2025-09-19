@@ -18,6 +18,8 @@ import { ClickEvent } from "./components/button-event/button-event.jsx";
 import { ElementStateDemo } from "./components/element-state-demo/element-state-demo.jsx";
 import { EmiCalculator } from "./components/emi-calculator/emi-calculator.jsx";
 import { TimerDemo } from "./components/timer-demo/timer-demo.jsx";
+import { StopWatch } from "./components/stop-watch/stop-watch.jsx";
+import { CarouselDemo } from "./components/carousel-demo/carousel-demo.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -37,6 +39,8 @@ createRoot(document.getElementById("root")).render(
     {/* <ClickEvent/> */}
     {/* <ElementStateDemo /> */}
     {/* <EmiCalculator/> */}
-    <TimerDemo/>
+    {/* <TimerDemo/> */}
+    {/* <StopWatch /> */}
+    <CarouselDemo/>
   </StrictMode>
 );
