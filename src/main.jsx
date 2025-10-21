@@ -20,6 +20,8 @@ import { EmiCalculator } from "./components/emi-calculator/emi-calculator.jsx";
 import { TimerDemo } from "./components/timer-demo/timer-demo.jsx";
 import { StopWatch } from "./components/stop-watch/stop-watch.jsx";
 import { CarouselDemo } from "./components/carousel-demo/carousel-demo.jsx";
+import  {EventDemo}  from "./components/event-demo/event-demo.jsx";
+import { TouchEvent } from "./components/event-demo/touch-event.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -41,6 +43,8 @@ createRoot(document.getElementById("root")).render(
     {/* <EmiCalculator/> */}
     {/* <TimerDemo/> */}
     {/* <StopWatch /> */}
-    <CarouselDemo/>
+    {/* <CarouselDemo/> */}
+    {/* <EventDemo/> */}
+    <TouchEvent/>
   </StrictMode>
 );
