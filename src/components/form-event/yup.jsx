@@ -1,51 +1,6 @@
 import { useFormik } from "formik";
-export function Formik() {
-  function ValidateUser(formData) {
-    var errors = {
-      UserName: "",
-      Email: "",
-      Age: "",
-      Gender: "",
-      City: "",
-      Mobile: "",
-    };
-    if (formData.UserName.length === 0) {
-      errors.UserName = "User Name is required";
-    } else {
-      if (formData.UserName.length < 5) {
-        errors.UserName = "User Name should be minimum 5 characters";
-      }
-    }
-
-    if (formData.Age.length === 0) {
-      errors.Age = "Age is required";
-    } else {
-      if (isNaN(formData.Age)) {
-        errors.Age = "Age should be numeric value";
-      } else {
-        errors.Age = "";
-      }
-    }
-
-    if (formData.Gender === "") {
-      errors.Gender = "Please select Gender";
-    } else {
-      errors.Gender = "";
-    }
-
-    if (formData.City === "") {
-      errors.City = "Please select City";
-    } else {
-      errors.City = "";
-    }
-
-    if (formData.Mobile.match(/\+91\d{10}/)) {
-      errors.Mobile = "";
-    } else {
-      errors.Mobile = "Mobile number should be in +91xxxxxxxxxx format";
-    }
-    return errors;
-  }
+import * as yup from "yup";
+export function Yup() {
   const formik = useFormik({
     initialValues: {
       UserName: "",
@@ -55,7 +10,24 @@ export function Formik() {
       City: "",
       Mobile: "",
     },
-    validate: ValidateUser,
+    validationSchema: yup.object({
+      UserName: yup
+        .string()
+        .required("UserName is required")
+        .min(4, "Name is too short"),
+      Age: yup
+        .number("Age must be a number")
+        .min(15, "Minimum age is 15")
+        .required("Age is required"),
+      Mobile: yup
+        .string()
+        .required("Mobile is required")
+        .matches(
+          /\+91\d{10}/,
+          "Mobile number should be in +91xxxxxxxxxx format"
+        ),
+      Email: yup.string().email("Invalid Email").required("Email Required"),
+    }),
     onSubmit: (data) => {
       console.log(data);
     },
@@ -77,7 +49,7 @@ export function Formik() {
           <dd className="text-danger">{formik.errors.UserName}</dd>
           <dt>Email</dt>
           <dd>
-            <input type="email" name="Email" onChange={formik.handleChange} />
+            <input type="text" name="Email" onChange={formik.handleChange} />
           </dd>
           <dd className="text-danger">{formik.errors.Email}</dd>
 
