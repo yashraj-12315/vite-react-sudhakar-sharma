@@ -25,6 +25,7 @@ import { TouchEvent } from "./components/event-demo/touch-event.jsx";
 import { FormDemo } from "./components/form-event/form-event.jsx";
 import { Formik } from "./components/form-event/formik.jsx";
 import { Yup } from "./components/form-event/yup.jsx";
+import { FormikDemo } from "./components/formik-demo/formik-demo.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -51,6 +52,7 @@ createRoot(document.getElementById("root")).render(
     {/* <TouchEvent/> */}
     {/* <FormDemo/> */}
     {/* <Formik /> */}
-    <Yup />
+    {/* <Yup /> */}
+    <FormikDemo />
   </StrictMode>
 );
