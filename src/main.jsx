@@ -26,6 +26,7 @@ import { FormDemo } from "./components/form-event/form-event.jsx";
 import { Formik } from "./components/form-event/formik.jsx";
 import { Yup } from "./components/form-event/yup.jsx";
 import { FormikDemo } from "./components/formik-demo/formik-demo.jsx";
+import { HookForm } from "./components/react-hook-form-demo/hook-form.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -53,6 +54,7 @@ createRoot(document.getElementById("root")).render(
     {/* <FormDemo/> */}
     {/* <Formik /> */}
     {/* <Yup /> */}
-    <FormikDemo />
+    {/* <FormikDemo /> */}
+    <HookForm />
   </StrictMode>
 );
