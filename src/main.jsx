@@ -28,6 +28,7 @@ import { Yup } from "./components/form-event/yup.jsx";
 import { FormikDemo } from "./components/formik-demo/formik-demo.jsx";
 import { HookForm } from "./components/react-hook-form-demo/hook-form.jsx";
 import { CustomDemo } from "./components/custom-demo/custom-demo.jsx";
+import { ConditionalRender } from "./components/conditional-render/conditional-render.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -57,6 +58,7 @@ createRoot(document.getElementById("root")).render(
     {/* <Yup /> */}
     {/* <FormikDemo /> */}
     {/* <HookForm /> */}
-    <CustomDemo />
+    {/* <CustomDemo /> */}
+    <ConditionalRender />
   </StrictMode>
 );
