@@ -1,5 +1,5 @@
-.form-background{
-    background-image: url("/public/girl-image.jpg");
-    background-size: cover;
-    padding: 20px;
+.form-background {
+  /* background-image: url("/public/girl-image.jpg");
+    background-size: cover; */
+  padding: 20px;
 }

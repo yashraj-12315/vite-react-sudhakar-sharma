@@ -29,6 +29,7 @@ import { FormikDemo } from "./components/formik-demo/formik-demo.jsx";
 import { HookForm } from "./components/react-hook-form-demo/hook-form.jsx";
 import { CustomDemo } from "./components/custom-demo/custom-demo.jsx";
 import { ConditionalRender } from "./components/conditional-render/conditional-render.jsx";
+import { Login } from "./components/login/login.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -59,6 +60,7 @@ createRoot(document.getElementById("root")).render(
     {/* <FormikDemo /> */}
     {/* <HookForm /> */}
     {/* <CustomDemo /> */}
-    <ConditionalRender />
+    {/* <ConditionalRender /> */}
+    <Login />
   </StrictMode>
 );
